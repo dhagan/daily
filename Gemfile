@@ -37,3 +37,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'nokogiri'
+gem 'bootstrap-sass'
+#Autoprefixer (autoprefixer-rails) is optional, but recommended. It automatically adds the proper vendor prefixes to your CSS code when it is compiled.
+gem 'autoprefixer-rails'

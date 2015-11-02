@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+/* DJH renamed to application.css.css.sass
+@import "bootstrap-sprockets"
+@import "bootstrap"
+*/
