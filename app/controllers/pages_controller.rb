@@ -11,6 +11,8 @@ class PagesController < ApplicationController
 =end
 
     require 'nokogiri'
+    require 'open-uri'
+
     @URL = 'http://www.swellinfo.com/rss/surf/hookipa-maui.xml'
 
     @doc = Nokogiri::XML(open(@URL))
@@ -23,7 +25,12 @@ class PagesController < ApplicationController
   end
 
   def send_mail
-    puts 'hererhere'
+    puts 'send_mail called'
+    #@user = Object.new
+    #@user.email = 'djh_sup4@mailinator.com'
+    @user = OpenStruct.new
+    @user.email = 'dhagan111@gmail.com'
+    UserMailer.welcome_email(@user).deliver!
     #head :ok
   end
 
